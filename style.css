@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+}
+body {
+    background: red !important;
+}
+body {
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column; /* Stacks Nav on top of Cards */
+  align-items: center;
+  min-height: 100vh;
+  background-color: #c5ccd6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* [Step 1] Navigation Menu Alignment */
+.nav-menu {
+  display: flex;               /* Turns on Flexbox for Nav */
+  justify-content: space-around; /* Distributes buttons evenly */
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #003580;
+  font-weight: bold;
+}
+
+/* [Step 2] Content Wrapper for Horizontal Card Layout */
+.content-wrapper {
+  display: flex;         /* Mother Principle: Parents flex */
+  flex-wrap: wrap;       /* Overflow Guard: Moves to next line if small */
+  justify-content: center;
+  gap: 25px;             /* Spacing between cards */
+}
+
+/* Card Styling */
+.card {
+  width: 380px;
+  background: rgb(196, 171, 224);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  border: 2px solid #333;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* [Step 3] Fix Image Overflow */
+.responsive-img {
+  /* width: 1000px; */  /* This caused the overflow (The Iron Bar) */
+  max-width: 100%;      /* The Correct Fix (The Rubber Band) */
+  height: auto;
+  display: block;
+}
+
+.header {
+  background-color: #00803c;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c5b979;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.info {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: rgb(142, 74, 141);
+}
+
+.title {
+  color: #003580;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid rgb(207, 151, 151);
+  padding-top: 15px;
+}
+
+/* Flexbox for Footer links */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background: #84d4d4;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #800015a1;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
